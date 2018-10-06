@@ -1,5 +1,5 @@
 body {
-  font-family: Arial;
+  font-family: $Arial;
 }
 
 main {
@@ -14,7 +14,7 @@ main {
 
   &:hover {
     .product-item__desctiption {
-      border: 1px solid #7eb105;
+      border: 1px solid $green;
       border-radius: 3px;
       box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
     }
@@ -29,7 +29,7 @@ main {
     padding-right: 16px;
     padding-top: 12px;
     border: 1px solid transparent;
-    border-right: 1px solid #ebebeb;
+    border-right: 1px solid $gray2;
 
     &-bottom {
       padding-top: 9px;
@@ -61,21 +61,21 @@ main {
   &__color {
     width: 16px;
     height: 16px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     border-radius: 4px;
     margin-right: 10px;
     cursor: pointer;
 
     &.color-black {
-      background: #454545;
+      background: $black;
     }
 
     &.color-pink {
-      background: #ffaca7;
+      background: $pink;
     }
 
     &.current {
-      box-shadow: 0 0 0 2px #7eb105;
+      box-shadow: 0 0 0 2px $green;
     }
   }
 
@@ -106,23 +106,21 @@ main {
     font-weight: Bold;
     font-size: 12px;
     line-height: 14px;
-    color: #999999;
+    color: $gray4;
     padding-left: 4px;
   }
 
   &__reviews {
     font-size: 12px;
     line-height: 14px;
-    color: #7eb105;
+    color: $green;
     display: flex;
     align-items: center;
 
     &-icon {
-      display: block;
-      width: 18px;
-      height: 15px;
+      max-height: 15px;
+      transform: translateY(-2px);
       margin-right: 3px;
-      background: url("../img/icons/review.svg") center no-repeat;
     }
 
     a {
@@ -134,10 +132,10 @@ main {
     font-size: 10px;
     line-height: 14px;
     margin-top: 4px;
-    color: #c4c4c4;
+    color: $gray3;
 
     span {
-      color: #212121;
+      color: $black2;
     }
   }
 
@@ -156,18 +154,18 @@ main {
     }
 
     &.status-not-enough {
-      color: #f6731c;
+      color: $orange;
 
       &::before {
-        background-color: #f6731c;
+        background-color: $orange;
       }
     }
 
     &.status-enough {
-      color: #7eb105;
+      color: $green;
 
       &::before {
-        background-color: #7eb105;
+        background-color: $green;
       }
     }
   }
@@ -177,7 +175,7 @@ main {
     padding-top: 6px;
     font-size: 14px;
     line-height: 16px;
-    color: #212121;
+    color: $black2;
     text-decoration: none;
     height: 32px;
   }
@@ -196,22 +194,22 @@ main {
   &__version {
     font-size: 14px;
     line-height: 18px;
-    color: #7eb105;
-    border-bottom: 1px dashed #7eb105;
+    color: $green;
+    border-bottom: 1px dashed $green;
     margin-right: 9px;
     cursor: pointer;
 
     &:hover {
       border-bottom: none;
-      color: #212121;
-      background: #eefbe0;
+      color: $black2;
+      background: $gray5;
       border-radius: 2px;
     }
 
     &.current {
       border-bottom: none;
-      color: #212121;
-      background: #eefbe0;
+      color: $black2;
+      background: $gray5;
       border-radius: 2px;
     }
   }
@@ -219,7 +217,7 @@ main {
   &__price {
     display: flex;
     align-items: center;
-    font-family: "Ubuntu";
+    font-family: $Ubuntu;
 
     &-container {
       padding-top: 3px;
@@ -228,7 +226,7 @@ main {
     &-special {
       font-size: 10px;
       line-height: 12px;
-      color: #f6731c;
+      color: $orange;
       visibility: hidden;
 
       &.active {
@@ -237,7 +235,7 @@ main {
     }
 
     &-old {
-      color: #c4c4c4;
+      color: $gray3;
       text-decoration: line-through;
       font-size: 14px;
       padding-right: 9px;
@@ -247,7 +245,7 @@ main {
       font-size: 21px;
       line-height: 23px;
       font-weight: bold;
-      color: #f6731c;
+      color: $orange;
     }
 
     &-cy {
@@ -260,7 +258,7 @@ main {
   &__bonus {
     font-size: 12px;
     line-height: 14px;
-    color: #7eb105;
+    color: $green;
     padding-top: 5px;
     padding-bottom: 4px;
     visibility: hidden;
@@ -291,7 +289,7 @@ main {
     margin-right: -1px;
 
     &-container {
-      border-top: 1px solid #ebebeb;
+      border-top: 1px solid $gray2;
       padding-top: 11px;
       padding-bottom: 11px;
     }
@@ -309,14 +307,14 @@ main {
     &-title {
       font-size: 14px;
       line-height: 16px;
-      color: #212121;
+      color: $black2;
       font-weight: bold;
     }
 
     &-item {
       font-size: 14px;
       line-height: 19px;
-      color: #999999;
+      color: $gray4;
       position: relative;
 
       &::before {
@@ -328,7 +326,7 @@ main {
         top: 7px;
         left: -16px;
         border-radius: 50%;
-        background: #c4c4c4;
+        background: $gray3;
       }
     }
   }
@@ -346,7 +344,7 @@ main {
     &-title {
       font-size: 12px;
       line-height: 14px;
-      font-family: "Ubuntu";
+      font-family: $Ubuntu;
       font-weight: bold;
       text-transform: uppercase;
     }
@@ -355,7 +353,7 @@ main {
       font-size: 11px;
       font-weight: bold;
       line-height: 16px;
-      color: #f6731c;
+      color: $orange;
     }
   }
 }

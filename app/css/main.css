@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic");
 
 body {
-  font-family: Arial;
+  font-family: "Arial";
 }
 
 main {
@@ -149,11 +149,11 @@ main {
 }
 
 .product-item__reviews-icon {
-  display: block;
-  width: 18px;
-  height: 15px;
+  max-height: 15px;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
   margin-right: 3px;
-  background: url("../img/icons/review.svg") center no-repeat;
 }
 
 .product-item__reviews a {
