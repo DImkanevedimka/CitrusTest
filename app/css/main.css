@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic");
+
+body {
+  font-family: Arial;
+}
+
+main {
+  padding-top: 100px;
+}
+
+.product-item {
+  width: 249px;
+  max-height: 494px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.product-item:hover .product-item__desctiption {
+  border: 1px solid #7eb105;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.product-item:hover .product-item__desctiption-bottom {
+  display: block;
+}
+
+.product-item__desctiption {
+  padding-left: 15px;
+  padding-right: 16px;
+  padding-top: 12px;
+  border: 1px solid transparent;
+  border-right: 1px solid #ebebeb;
+}
+
+.product-item__desctiption-bottom {
+  padding-top: 9px;
+  padding-bottom: 15px;
+  display: none;
+}
+
+.product-item__icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1px;
+  height: 27px;
+}
+
+.product-item__icon {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.product-item__colors {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -12px;
+  margin-bottom: 8px;
+  padding-left: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.product-item__color {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.product-item__color.color-black {
+  background: #454545;
+}
+
+.product-item__color.color-pink {
+  background: #ffaca7;
+}
+
+.product-item__color.current {
+  -webkit-box-shadow: 0 0 0 2px #7eb105;
+  box-shadow: 0 0 0 2px #7eb105;
+}
+
+.product-item__testimonials {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.product-item__rating {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-item__rating-icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-item__rating-icon {
+  width: 14px;
+  height: 14px;
+  background: url("../img/icons/star_nofill.svg") center no-repeat;
+}
+
+.rating-3 .product-item__rating-icon:nth-child(-n + 3) {
+  background: url("../img/icons/star_fill.svg") center no-repeat;
+}
+
+.product-item__point {
+  font-weight: Bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #999999;
+  padding-left: 4px;
+}
+
+.product-item__reviews {
+  font-size: 12px;
+  line-height: 14px;
+  color: #7eb105;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.product-item__reviews-icon {
+  display: block;
+  width: 18px;
+  height: 15px;
+  margin-right: 3px;
+  background: url("../img/icons/review.svg") center no-repeat;
+}
+
+.product-item__reviews a {
+  color: inherit;
+}
+
+.product-item__code {
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 4px;
+  color: #c4c4c4;
+}
+
+.product-item__code span {
+  color: #212121;
+}
+
+.product-item__status {
+  padding-top: 5px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.product-item__status::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.product-item__status.status-not-enough {
+  color: #f6731c;
+}
+
+.product-item__status.status-not-enough::before {
+  background-color: #f6731c;
+}
+
+.product-item__status.status-enough {
+  color: #7eb105;
+}
+
+.product-item__status.status-enough::before {
+  background-color: #7eb105;
+}
+
+.product-item__name {
+  display: block;
+  padding-top: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #212121;
+  text-decoration: none;
+  height: 32px;
+}
+
+.product-item__versions {
+  visibility: hidden;
+  height: 18px;
+  padding-top: 7px;
+  padding-left: 2px;
+}
+
+.product-item__versions.active {
+  visibility: visible;
+}
+
+.product-item__version {
+  font-size: 14px;
+  line-height: 18px;
+  color: #7eb105;
+  border-bottom: 1px dashed #7eb105;
+  margin-right: 9px;
+  cursor: pointer;
+}
+
+.product-item__version:hover {
+  border-bottom: none;
+  color: #212121;
+  background: #eefbe0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.product-item__version.current {
+  border-bottom: none;
+  color: #212121;
+  background: #eefbe0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.product-item__price {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Ubuntu";
+}
+
+.product-item__price-container {
+  padding-top: 3px;
+}
+
+.product-item__price-special {
+  font-size: 10px;
+  line-height: 12px;
+  color: #f6731c;
+  visibility: hidden;
+}
+
+.product-item__price-special.active {
+  visibility: visible;
+}
+
+.product-item__price-old {
+  color: #c4c4c4;
+  text-decoration: line-through;
+  font-size: 14px;
+  padding-right: 9px;
+}
+
+.product-item__price-current {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: bold;
+  color: #f6731c;
+}
+
+.product-item__price-cy {
+  vertical-align: super;
+  font-size: 13px;
+  line-height: 1em;
+}
+
+.product-item__bonus {
+  font-size: 12px;
+  line-height: 14px;
+  color: #7eb105;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  visibility: hidden;
+  height: 14px;
+}
+
+.product-item__bonus.active {
+  visibility: visible;
+}
+
+.product-item__bonus span {
+  font-weight: bold;
+}
+
+.product-item__button {
+  cursor: pointer;
+}
+
+.product-item__button-container {
+  width: 33.33%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.product-item__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1px;
+  margin-right: -1px;
+}
+
+.product-item__buttons-container {
+  border-top: 1px solid #ebebeb;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.product-item__characteristics {
+  padding-top: 3px;
+  padding-left: 22px;
+  padding-right: 8px;
+}
+
+.product-item__characteristics-container {
+  padding-top: 13px;
+}
+
+.product-item__characteristics-title {
+  font-size: 14px;
+  line-height: 16px;
+  color: #212121;
+  font-weight: bold;
+}
+
+.product-item__characteristics-item {
+  font-size: 14px;
+  line-height: 19px;
+  color: #999999;
+  position: relative;
+}
+
+.product-item__characteristics-item::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 7px;
+  left: -16px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #c4c4c4;
+}
+
+.product-item__stock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-item__stock-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 9px;
+  padding-top: 6px;
+}
+
+.product-item__stock-title {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-item__stock-description {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 16px;
+  color: #f6731c;
+}
